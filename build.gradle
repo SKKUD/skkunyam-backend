@@ -1,0 +1,66 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.4'
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.skkudteam3'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'org.jetbrains:annotations:23.0.0'
+
+
+	// Spring Boot Starter
+	testImplementation ('org.springframework.boot:spring-boot-starter-test')
+
+	// Lombok
+	implementation ('org.projectlombok:lombok')
+	compileOnly ('org.projectlombok:lombok:1.18.24')
+	annotationProcessor ('org.projectlombok:lombok:1.18.24')
+
+	// DB Settings
+	runtimeOnly("com.mysql:mysql-connector-j")
+	//runtimeOnly 'mysql:mysql-connector-java:5.1.47' //mysql5
+	implementation ('org.springframework.boot:spring-boot-starter-jdbc')
+	implementation ('org.springframework.boot:spring-boot-starter-data-jpa')
+
+
+	// Web
+	implementation ('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+
+	// Validation
+	implementation('org.springframework.boot:spring-boot-starter-validation')
+
+	// jwt . jjwt 라이브러리를 사용함.
+	implementation(group: 'io.jsonwebtoken', name: 'jjwt', version: '0.11.5')
+	implementation('io.jsonwebtoken:jjwt:0.9.1')
+
+	// Swagger
+	implementation ('org.springdoc:springdoc-openapi-ui:1.6.14')
+
+
+}
+
+test {
+	useJUnitPlatform()
+}
