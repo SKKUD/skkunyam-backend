@@ -16,11 +16,11 @@ spring:
     init:
       platform: mysql
   datasource:
+    username: root
     url: jdbc:mysql://localhost:3306/skkunyam?characterEncoding=UTF-8
-    username: skkud
     password: a01084204241
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8버전
-    # driver-class-name: com.mysql.jdbc.Driver # mysql 5버전
+#    driver-class-name: com.mysql.jdbc.Driver # mysql 5버전
   OAuth2:
     kakao:
       url: https://kauth.kakao.com/oauth/authorize
@@ -28,10 +28,10 @@ spring:
       callback-login-url: http://localhost/app/users/auth/kakao/login/callback # 인가 코드 전달받을 서비스 서버의 URI
 
 server:
-  port: 9000
+  port: 8080
 
 springdoc:
-  swagger-ui:
+  swagger-ui: # swagger 설정
     path: /swagger-ui.html
     groups-order: DESC
     operationsSorter: method
