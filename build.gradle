@@ -33,11 +33,14 @@ dependencies {
 
 	// Lombok
 	implementation ('org.projectlombok:lombok')
-	compileOnly ('org.projectlombok:lombok:1.18.24')
+    testImplementation 'junit:junit:4.13.1'
+    compileOnly ('org.projectlombok:lombok:1.18.24')
 	annotationProcessor ('org.projectlombok:lombok:1.18.24')
 
 	// DB Settings
 	runtimeOnly("com.mysql:mysql-connector-j")
+	// 테스트용 h2db
+	runtimeOnly ('com.h2database:h2')
 	//runtimeOnly 'mysql:mysql-connector-java:5.1.47' //mysql5
 	implementation ('org.springframework.boot:spring-boot-starter-jdbc')
 	implementation ('org.springframework.boot:spring-boot-starter-data-jpa')
@@ -58,6 +61,7 @@ dependencies {
 	// Swagger
 	implementation ('org.springdoc:springdoc-openapi-ui:1.6.14')
 
+<<<<<<< HEAD
 	//spring security
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.security:spring-security-test")
@@ -65,6 +69,15 @@ dependencies {
 	//spring security oauth2 cleint
 	implementation ("org.springframework.boot:spring-boot-starter-oauth2-client")
 
+=======
+	// 직렬화
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+	// test용 lombok
+	testImplementation 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+>>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d
 
 }
 

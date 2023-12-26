@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test # 인메모리에서 h2db를 작동시킬 수 있게함. 즉, 테스트 환경의 DB와 실제 운영 DB랑 완전 분리할 수 있음!! 그런데, 스프링부트에서는 이런 점들 필요없이 자동으로 해줌!!
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+    properties:
+      hibernate:
+#        show_sql:true
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # log? sql? ??.
+#    org.hibernate.orm.jdbc.bind: trace # Spring 3???? ???? ?
+
+# org.hibernate.type: trace #??? ?? 2.x, hibernate5
+# org.hibernate.orm.jdbc.bind: trace #??? ?? 3.x, hibernate6
