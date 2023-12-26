@@ -1,13 +1,5 @@
-<<<<<<< HEAD:src/main/java/com/skkudteam3/skkusirenorder/src/domain/admin/entity/AdminLogin.java
-package com.skkudteam3.skkusirenorder.src.domain.admin.entity;
-
-
-import com.skkudteam3.skkusirenorder.src.domain.boards.entity.Board;
-=======
 package com.skkudteam3.skkusirenorder.src.entity;
 
-
->>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d:src/main/java/com/skkudteam3/skkusirenorder/src/entity/AdminLogin.java
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;

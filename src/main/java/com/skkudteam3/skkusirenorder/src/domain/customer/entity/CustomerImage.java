@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/main/java/com/skkudteam3/skkusirenorder/src/domain/customer/entity/CustomerImage.java
-package com.skkudteam3.skkusirenorder.src.domain.customer.entity;
-=======
 package com.skkudteam3.skkusirenorder.src.entity;
->>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d:src/main/java/com/skkudteam3/skkusirenorder/src/entity/CustomerImage.java
+
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

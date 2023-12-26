@@ -1,17 +1,10 @@
-<<<<<<< HEAD:src/main/java/com/skkudteam3/skkusirenorder/src/domain/customer/entity/Customer.java
-package com.skkudteam3.skkusirenorder.src.domain.customer.entity;
-=======
 package com.skkudteam3.skkusirenorder.src.entity;
->>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d:src/main/java/com/skkudteam3/skkusirenorder/src/entity/Customer.java
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-<<<<<<< HEAD:src/main/java/com/skkudteam3/skkusirenorder/src/domain/customer/entity/Customer.java
 import org.hibernate.annotations.DynamicUpdate;
-=======
->>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d:src/main/java/com/skkudteam3/skkusirenorder/src/entity/Customer.java
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

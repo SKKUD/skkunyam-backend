@@ -61,7 +61,6 @@ dependencies {
 	// Swagger
 	implementation ('org.springdoc:springdoc-openapi-ui:1.6.14')
 
-<<<<<<< HEAD
 	//spring security
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.security:spring-security-test")
@@ -69,7 +68,6 @@ dependencies {
 	//spring security oauth2 cleint
 	implementation ("org.springframework.boot:spring-boot-starter-oauth2-client")
 
-=======
 	// 직렬화
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
@@ -77,7 +75,6 @@ dependencies {
 	// test용 lombok
 	testImplementation 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
->>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d
 
 }
 

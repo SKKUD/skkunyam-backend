@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/main/java/com/skkudteam3/skkusirenorder/src/domain/boards/entity/File.java
-package com.skkudteam3.skkusirenorder.src.domain.boards.entity;
-=======
 package com.skkudteam3.skkusirenorder.src.entity;
->>>>>>> ad0a4e72ed59ac251a7e0ce70488b54343b1622d:src/main/java/com/skkudteam3/skkusirenorder/src/entity/File.java
+
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
