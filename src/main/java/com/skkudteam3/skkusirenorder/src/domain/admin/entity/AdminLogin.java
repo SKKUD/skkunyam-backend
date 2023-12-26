@@ -1,7 +1,7 @@
-package com.skkudteam3.skkusirenorder.src.admin.entity;
+package com.skkudteam3.skkusirenorder.src.domain.admin.entity;
 
 
-import com.skkudteam3.skkusirenorder.src.boards.entity.Board;
+import com.skkudteam3.skkusirenorder.src.domain.boards.entity.Board;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;

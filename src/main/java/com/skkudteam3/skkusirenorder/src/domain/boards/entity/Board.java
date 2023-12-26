@@ -1,6 +1,6 @@
-package com.skkudteam3.skkusirenorder.src.boards.entity;
+package com.skkudteam3.skkusirenorder.src.domain.boards.entity;
 
-import com.skkudteam3.skkusirenorder.src.admin.entity.AdminLogin;
+import com.skkudteam3.skkusirenorder.src.domain.admin.entity.AdminLogin;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;

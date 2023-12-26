@@ -1,10 +1,10 @@
-package com.skkudteam3.skkusirenorder.src.customer.entity;
+package com.skkudteam3.skkusirenorder.src.domain.customer.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,7 +12,8 @@ import java.util.List;
 
 @Getter
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@DynamicUpdate
+@NoArgsConstructor(access = AccessLevel.PROTECTED)//기본 생성자 생성
 @Table(name = "CUSTOMER")
 public class Customer {
 
@@ -39,8 +40,6 @@ public class Customer {
     @OneToMany(mappedBy = "customer")
     private List<Bookmark> bookmarks = new ArrayList<>();
 
-    //protected Customer(){}
-
     private Customer(String customerName, String email, int phoneNumber,SocialType socialType, int point){
         this.customerName = customerName;
         this.email = email;
@@ -59,5 +58,10 @@ public class Customer {
         this.point = point;
     }
 
+    // 사용자 정보 수정
+    public void updateProfile (String customerName, int phoneNumber) {
+        this.customerName = customerName;
+        this.phoneNumber = phoneNumber;
+    }
 
 }
