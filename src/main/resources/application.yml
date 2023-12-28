@@ -1,3 +1,4 @@
+
 spring:
   profiles:
     group: # Run - Edit Configurations - Active Profiles에서 설정
@@ -16,47 +17,17 @@ spring:
     init:
       platform: mysql
   datasource:
-    username: root
+    username: skkud #root
     url: jdbc:mysql://localhost:3306/skkunyam?characterEncoding=UTF-8
     password: a01084204241
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8버전
 #    driver-class-name: com.mysql.jdbc.Driver # mysql 5버전
-  # oauth2 연동
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: 308314647311-m8ijsfqkeee8ljujsqqv6vdnhavt7slr.apps.googleusercontent.com
-            client-secret: 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
-            scope: # 기본 값 openid,profile,email => profile, email 로 설정 변경
-              - profile
-              - email
-
-          kakao:
-            client-id: aa2752551d8b8386998c52644125f85c
-            client-secret: BZpIbPOUsA6RmOWgnyblzOrz0QZ6a9lN
-            client-authentication-method: client_secret_post
-            authorization-grant-type: authorization_code
-            scope: # https://developers.kakao.com/docs/latest/ko/kakaologin/common#user-info
-              - profile_nickname
-              - profile_image
-            redirect-uri: "http://localhost:8080/customer/login/kakao"
-            client-name: Kakao
-
-        provider:
-          kakao:
-            authorization-uri: https://kauth.kakao.com/oauth/authorize
-            token-uri: https://kauth.kakao.com/oauth/token
-            user-info-uri: https://kapi.kakao.com/v2/user/me
-            user-info-authentication-method: header
-            user-name-attribute: id # Kakao 응답 값 id, connected_at, properties, kakao_account 중 id 지정
-
-  OAuth2:
-    kakao:
-      url: https://kauth.kakao.com/oauth/authorize
-      client-id: 7c8dce76f04cb7bcf9d265fa84c4dde2 # 앱 REST API 키
-      callback-login-url: http://localhost/app/users/auth/kakao/login/callback # 인가 코드 전달받을 서비스 서버의 URI
+#  OAuth2:
+#    kakao:
+#      url: https://kauth.kakao.com/oauth/authorize
+#      client-id: 7c8dce76f04cb7bcf9d265fa84c4dde2 # 앱 REST API 키
+#      callback-login-url: http://localhost/app/users/auth/kakao/login/callback # 인가 코드 전달받을 서비스 서버의 URI
+  #Oauth2 연동
 
 server:
   port: 8080
@@ -118,4 +89,3 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
