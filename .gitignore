@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ### 환경변수 파일 X ###
-/src/main/resources/env/env.yml
+src/main/resources/env/env.yml
