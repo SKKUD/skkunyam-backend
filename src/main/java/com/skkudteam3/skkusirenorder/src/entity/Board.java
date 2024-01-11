@@ -2,6 +2,7 @@ package com.skkudteam3.skkusirenorder.src.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -20,6 +21,7 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
+    private String createdBy;
     private String content;
     private LocalDateTime createdAt;
     private LocalDateTime lastModifiedAt;
@@ -32,5 +34,10 @@ public class Board {
     private List<File> files = new ArrayList<>();
 
 
-
+    @Builder
+    public Board(String title, String content, String createdBy, Long countVisit ) {
+        this.title = title;
+        this.content = content;
+        this.createdBy = createdBy;
+    }
 }

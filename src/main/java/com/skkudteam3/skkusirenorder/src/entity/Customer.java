@@ -2,6 +2,7 @@ package com.skkudteam3.skkusirenorder.src.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
@@ -40,7 +41,8 @@ public class Customer {
     @OneToMany(mappedBy = "customer")
     private List<Bookmark> bookmarks = new ArrayList<>();
 
-    private Customer(String customerName, String email, int phoneNumber,SocialType socialType, int point){
+    //@Builder
+    private Customer(String customerName, String email, int phoneNumber, SocialType socialType, int point){
         this.customerName = customerName;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -49,8 +51,8 @@ public class Customer {
     }
 
     //정적 팩토리 메소드 -> 무분별한 class 생성 방지
-    public static Customer createCustomer(String customerName, String email, int phoneNumber,SocialType socialType, int point){
-        return new Customer(customerName, email, phoneNumber, socialType, point);
+    public static Customer createCustomer(String customerName, String email, int phoneNumber, SocialType socialType, int point){
+        return new Customer(customerName, email, phoneNumber, socialType, point );
     }
 
     // point 수정 시 사용
